@@ -1,7 +1,48 @@
-vpc_cidr_block = "192.168.0.0/16"
-subnet_cidr_block = "192.168.0.0/22"
-az = ["ap-southeast-1a", "ap-southeast-1b", "ap-southeast-1c"]
-port_no = [ 0, 22, 80, 443 , 8080 ]
-ami_id = "ami-04b6019d38ea93034"
-instance_type = "t2.micro"
-key = "keypair-se1"
+
+variable "vpc_cidr_block" {
+    type = string
+    description = "use this vpc cidr block"
+   
+}
+
+variable "subnet_cidr_block" {
+    type = string
+    
+  
+}
+
+variable "az" {
+    type = list(string)
+
+  
+}
+
+variable "port_no" {
+  type = list(number)
+  
+}
+
+variable "ami_id" {
+    type = string
+    
+  
+}
+
+variable "instance_type" {
+    type = string
+    
+  
+}
+
+variable "key" {
+    type = string
+
+}
+
+# variable holds the name of the variable
+# data types:
+# 1. string --> consists of aplphanumeric characters
+# 2. number --> consists of numbers only
+# 3. bool   --> consists of yes or no
+# 4. list --> consists of list of string or number
+# 5. map --> consists of key value pairs
